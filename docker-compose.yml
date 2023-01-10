@@ -9,7 +9,7 @@ services:
             - '5000:5000'
         tty: true
         restart: always
-        command: python3 src/main.py
+        command: python3.6 src/main.py
     map:
         container_name: map
         build:
@@ -19,7 +19,7 @@ services:
             - '8080:8080'
         tty: true
         restart: always
-        command: python3 src/main.py
+        command: python3.6 src/main.py
     main:
         container_name: main
         build: .
@@ -32,4 +32,4 @@ services:
             - ./config/:/config/
             - ./cache/:/cache/
             - ./src/:/src/
-        command: python3 src/main.py
+        command: python3.6 src/main.py
